@@ -1,5 +1,5 @@
 import React from "react";
-import "./Button.module.scss";
+import styles from "./Button.module.scss";
 
 const Button = (props) => {
   // const pinkButton = {
@@ -28,7 +28,7 @@ const Button = (props) => {
   return (
     <div className="btn-wrapper">
       <button
-        className={`btn-cart-submit ${btnColorSwitch(props.color)}`}
+        className={styles[`btn-cart-submit ${btnColorSwitch(props.color)}`]}
         // style={pinkButton}
       >
         Test
