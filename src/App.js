@@ -1,10 +1,10 @@
-import "../src/sass/App.scss";
-import PurchaseComponent from "./components/PurchaseComponent";
+import "./App.module.scss";
+import PurchaseBox from "./components/PurchaseBox/PurchaseBox";
 
 function App() {
   return (
     <div className="App">
-      <PurchaseComponent />
+      <PurchaseBox />
     </div>
   );
 }

@@ -1,12 +1,12 @@
 import React from "react";
-import CheckMarkIcon from "./Icons/CheckMarkIcon/CheckMarkIcon";
-import QuantityIcon from "./Icons/QuantityIcon/QuantityIcon";
-import CustomButton from "./Button";
-import "../sass/PurchaseComponent.scss";
+import CheckMarkIcon from "../Icons/CheckMarkIcon/CheckMarkIcon";
+import QuantityIcon from "../Icons/QuantityIcon/QuantityIcon";
+import Button from "../Button/Button";
+import "./PurchaseBox.module.scss";
 
-const PurchaseComponent = (props) => {
+const PurchaseBox = (props) => {
   return (
-    <div className="purchase-component-wrapper">
+    <div className="purchase-box-wrapper">
       <div className="option-row-label">1. Select Option</div>
       <div className="option-row">
         <div className="option-gummies">
@@ -19,9 +19,9 @@ const PurchaseComponent = (props) => {
       </div>
       <CheckMarkIcon shape={"square"} />
       <QuantityIcon />
-      <CustomButton color={"pink"} />
+      <Button color={"pink"} />
     </div>
   );
 };
 
-export default PurchaseComponent;
+export default PurchaseBox;

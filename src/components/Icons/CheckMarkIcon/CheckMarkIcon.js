@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../../../sass/CheckMarkIcon.scss";
+import "./CheckMarkIcon.module.scss";
 
 const CheckMarkIcon = (props) => {
   const checkMarkColorSwitch = (shape) => {

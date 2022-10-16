@@ -1,0 +1,23 @@
+input [type=checkbox] .check-mark-icon-wrapper {
+  color: white;
+}
+input [type=checkbox] .check-mark-icon-wrapper .circle-check {
+  background-color: #f37490;
+  border: 2px solid #fabdcc;
+  border-radius: 50%;
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+}
+input [type=checkbox] .check-mark-icon-wrapper .unchecked {
+  background-color: white;
+}
+input [type=checkbox] .check-mark-icon-wrapper .square-check {
+  border: 2px solid #fabdcc;
+  height: 25px;
+  width: 25px;
+  background-color: #f37490;
+  display: inline-block;
+}
+
+/*# sourceMappingURL=CheckMarkIcon.module.css.map */

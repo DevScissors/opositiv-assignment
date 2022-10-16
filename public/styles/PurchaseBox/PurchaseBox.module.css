@@ -1,12 +1,12 @@
-.purchase-component-wrapper {
+.purchase-box-wrapper {
   display: flex;
   width: 50%;
   margin: 0 25%;
   border: 1px solid black;
   flex-direction: column;
 }
-.purchase-component-wrapper .option-row {
+.purchase-box-wrapper .option-row {
   flex-direction: row;
 }
 
-/*# sourceMappingURL=PurchaseComponent.css.map */
+/*# sourceMappingURL=PurchaseBox.module.css.map */

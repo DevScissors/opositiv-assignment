@@ -1,6 +1,7 @@
 import React from "react";
+import "./Button.module.scss";
 
-const CustomButton = (props) => {
+const Button = (props) => {
   // const pinkButton = {
   //   backgroundColor: "#f37490",
   //   border: "1px solid #f37490",
@@ -36,4 +37,4 @@ const CustomButton = (props) => {
   );
 };
 
-export default CustomButton;
+export default Button;
