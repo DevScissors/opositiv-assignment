@@ -10,11 +10,10 @@ const PurchaseBox = () => {
       <div className={styles["option-row-label"]}>1. Select Option</div>
       <div className={styles["option-row"]}>
         <div className={styles["option-gummies"]}>
-          Gummies: <p>Strawberry</p> <CheckMarkIcon shape={"circle"} />
+          <CheckMarkIcon shape={"circle"} /> Gummies: <p>Strawberry</p>
         </div>
         <div className={styles["option-capsules"]}>
-          {" "}
-          Capsules: <CheckMarkIcon shape={"circle"} />
+          <CheckMarkIcon shape={"circle"} /> Capsules: <p>Sugar-Free</p>
         </div>
       </div>
       <CheckMarkIcon shape={"square"} />

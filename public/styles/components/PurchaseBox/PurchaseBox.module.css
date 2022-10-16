@@ -2,11 +2,22 @@
   display: flex;
   width: 50%;
   margin: 0 25%;
-  border: 1px solid black;
+  border: 1px solid #fce9ed;
   flex-direction: column;
+  border-radius: 12%;
+  text-align: center;
 }
 .purchase-box-wrapper .option-row {
-  flex-direction: row;
+  display: flex;
+  justify-content: center;
+}
+.purchase-box-wrapper .option-row .option-gummies {
+  display: flex;
+  background-color: blue;
+}
+.purchase-box-wrapper .option-row .option-capsules {
+  display: flex;
+  background-color: red;
 }
 
 /*# sourceMappingURL=PurchaseBox.module.css.map */

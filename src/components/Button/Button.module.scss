@@ -1,20 +1,17 @@
 button {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
+  cursor: pointer;
+  color: white;
+  border-color: transparent;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  box-shadow: 5px 5px #fabdcc;
+  background-color: #f37490;
+}
 
-  .btn-wrapper {
-    .btn-cart-submit .pink {
-      background-color: #f37490;
-      color: white;
-      border-color: transparent;
-      border-radius: 50px;
-      display: flex;
-      justify-content: center;
-      position: relative;
-      font-weight: 700;
-      letter-spacing: 0.6px;
-      box-shadow: 5px 5px #fabdcc;
-    }
-  }
+.btn-cart-submit .pink {
+  color: blue;
 }

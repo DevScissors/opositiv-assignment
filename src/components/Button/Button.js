@@ -26,14 +26,13 @@ const Button = (props) => {
     }
   };
   return (
-    <div className="btn-wrapper">
-      <button
-        className={styles[`btn-cart-submit ${btnColorSwitch(props.color)}`]}
-        // style={pinkButton}
-      >
-        Test
-      </button>
-    </div>
+    <button
+      className={`${styles["btn-cart-submit"]} ${
+        styles[btnColorSwitch(props.color)]
+      }}`}
+    >
+      Test
+    </button>
   );
 };
 
