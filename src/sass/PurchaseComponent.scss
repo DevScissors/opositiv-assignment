@@ -1,0 +1,11 @@
+.purchase-component-wrapper {
+  display: flex;
+  width: 50%;
+  margin: 0 25%;
+  border: 1px solid black;
+  flex-direction: column;
+
+  .option-row {
+    flex-direction: row;
+  }
+}
