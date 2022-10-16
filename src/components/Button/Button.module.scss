@@ -1,17 +1,24 @@
-button {
-  cursor: pointer;
+// button {
+//   color: white;
+//   border-color: transparent;
+//   border-radius: 50px;
+//   display: flex;
+//   justify-content: center;
+//   position: relative;
+//   font-weight: 700;
+//   letter-spacing: 0.6px;
+//   box-shadow: 5px 5px #fabdcc;
+//   background-color: #f37490;
+// }
+
+.btn-cart-submit .pink {
   color: white;
   border-color: transparent;
   border-radius: 50px;
-  display: flex;
   justify-content: center;
   position: relative;
   font-weight: 700;
   letter-spacing: 0.6px;
   box-shadow: 5px 5px #fabdcc;
   background-color: #f37490;
-}
-
-.btn-cart-submit .pink {
-  color: blue;
 }
