@@ -15,8 +15,8 @@ const Button = (props) => {
   //   margin: "0 50%",
   //   cursor: "pointer",
   // };
-  const btnColorSwitch = (shape) => {
-    switch (shape) {
+  const btnColorSwitch = (color) => {
+    switch (color) {
       case "pink":
         return "pink";
       case "orange":
