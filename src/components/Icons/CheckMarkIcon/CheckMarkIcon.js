@@ -1,13 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 
 import styles from "./CheckMarkIcon.module.scss";
 
 const CheckMarkIcon = (props) => {
-  const [isChecked, setIsChecked] = useState(true);
-  const handleChange = () => {
-    setIsChecked(!isChecked);
-  };
-
   const checkMarkShapeSwitch = (shape) => {
     switch (shape) {
       case "circle":
@@ -25,10 +20,19 @@ const CheckMarkIcon = (props) => {
         <input
           className={`pink-${checkMarkShapeSwitch(props.shape)}`}
           type="checkbox"
-          checked={isChecked}
-          onChange={handleChange}
+          checked={props.checked === "gummies"}
+          onChange={props.onChange}
         />
-        {props.label}
+        {"Gummies"}
+      </label>
+      <label>
+        <input
+          className={`pink-${checkMarkShapeSwitch(props.shape)}`}
+          type="checkbox"
+          checked={props.checked === "capsules"}
+          onChange={props.onChange}
+        />
+        {"Capsules"}
       </label>
     </div>
   );
