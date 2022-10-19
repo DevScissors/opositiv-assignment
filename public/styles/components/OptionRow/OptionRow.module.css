@@ -1,0 +1,15 @@
+input [type=checkbox] .option-row-wrapper {
+  color: white;
+  /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  /* creating a custom design */
+  background-color: #f37490;
+  border: 2px solid #fabdcc;
+  border-radius: 50%;
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+}
+
+/*# sourceMappingURL=OptionRow.module.css.map */

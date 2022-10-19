@@ -1,14 +1,27 @@
 import React, { useState } from "react";
-import CheckMarkIcon from "../Icons/CheckMarkIcon/CheckMarkIcon";
-import QuantityIcon from "../Icons/QuantityIcon/QuantityIcon";
+import OptionRow from "../OptionRow/OptionRow";
+import PurchaseTypeRow from "../PurchaseTypeRow/PurchaseTypeRow";
 import Button from "../Button/Button";
 import styles from "./PurchaseBox.module.scss";
+import QuantityRow from "../QuantityRow/QuantityRow";
 
 const PurchaseBox = () => {
-  const [isChecked, setIsChecked] = useState("capsules");
+  const QUANTITIES = ["opt1", "opt2", "opt3"];
 
-  const handleChange = () => {
-    setIsChecked((isChecked) => !isChecked);
+  const [isOptionChecked, setIsOptionChecked] = useState("capsule");
+  const [isTypeChecked, setIsTypeChecked] = useState("subscribe");
+  const [isQuantityChecked, setIsQuantityChecked] = useState(QUANTITIES[1]);
+
+  const handleOptionChange = () => {
+    setIsOptionChecked((isChecked) => !isChecked);
+  };
+
+  const handleTypeChange = () => {
+    setIsTypeChecked((isChecked) => !isChecked);
+  };
+
+  const handleQuantityChange = () => {
+    setIsQuantityChecked((isChecked) => !isChecked);
   };
 
   return (
@@ -16,15 +29,27 @@ const PurchaseBox = () => {
       <div className={styles["option-row-label"]}>1. Select Option</div>
       <div className={styles["option-row"]}>
         <div className={styles["options"]}>
-          <CheckMarkIcon
-            onChange={handleChange}
-            checked={isChecked ? "capsules" : "gummies"}
+          <OptionRow
+            onChange={handleOptionChange}
+            checked={isOptionChecked ? "capsule" : "gummies"}
             shape={"circle"}
           />
-          <p>Strawberry</p>
         </div>
       </div>
-      <QuantityIcon />
+      <PurchaseTypeRow
+        onChange={handleTypeChange}
+        checked={isTypeChecked ? "subscribe" : "one-time"}
+      />
+      <QuantityRow
+        onChange={handleQuantityChange}
+        checked={
+          isQuantityChecked
+            ? QUANTITIES[1]
+            : QUANTITIES[2]
+            ? QUANTITIES[2]
+            : QUANTITIES[3]
+        }
+      />
       <Button color={"pink"} />
     </div>
   );
