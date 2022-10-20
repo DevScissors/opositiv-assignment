@@ -6,11 +6,9 @@ import styles from "./PurchaseBox.module.scss";
 import QuantityRow from "../QuantityRow/QuantityRow";
 
 const PurchaseBox = () => {
-  const QUANTITIES = ["opt1", "opt2", "opt3"];
-
   const [isOptionChecked, setIsOptionChecked] = useState("capsule");
   const [isTypeChecked, setIsTypeChecked] = useState("subscribe");
-  const [isQuantityChecked, setIsQuantityChecked] = useState(QUANTITIES[1]);
+  let [selectedQuantity, setSelectedQuantity] = useState(1);
 
   const handleOptionChange = () => {
     setIsOptionChecked((isChecked) => !isChecked);
@@ -20,8 +18,8 @@ const PurchaseBox = () => {
     setIsTypeChecked((isChecked) => !isChecked);
   };
 
-  const handleQuantityChange = () => {
-    setIsQuantityChecked((isChecked) => !isChecked);
+  const handleQuantityChange = (checkedValue) => {
+    setSelectedQuantity(checkedValue);
   };
 
   return (
@@ -40,16 +38,7 @@ const PurchaseBox = () => {
         onChange={handleTypeChange}
         checked={isTypeChecked ? "subscribe" : "one-time"}
       />
-      <QuantityRow
-        onChange={handleQuantityChange}
-        checked={
-          isQuantityChecked
-            ? QUANTITIES[1]
-            : QUANTITIES[2]
-            ? QUANTITIES[2]
-            : QUANTITIES[3]
-        }
-      />
+      <QuantityRow onChange={handleQuantityChange} checked={selectedQuantity} />
       <Button color={"pink"} />
     </div>
   );
