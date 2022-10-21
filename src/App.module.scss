@@ -1,6 +1,5 @@
 .App {
   margin: 0 25%;
-  text-align: center;
 }
 
 .App-logo {
@@ -47,4 +46,15 @@ button {
 button,
 input[type="submit"] {
   cursor: pointer;
+}
+
+input [type="checkbox"] {
+  color: white;
+  /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+p {
+  margin: 0 0 30px;
 }

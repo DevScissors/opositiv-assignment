@@ -1,17 +1,89 @@
 @import "../../variables.scss";
 
+.option-row-header-wrapper {
+  display: flex;
+
+  .option-row-number {
+    width: 30px;
+  }
+
+  .option-row-number,
+  .option-row-label {
+    font-size: 20px;
+    font-weight: bold;
+    color: #555555;
+    font-family: "Apercu-Regular";
+  }
+
+  p {
+    margin-bottom: 0;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+}
+
 input [type="checkbox"] {
-  .option-row-wrapper {
-    color: white;
-    /* removing default appearance */
-    -webkit-appearance: none;
-    appearance: none;
-    /* creating a custom design */
-    background-color: $primary-pink-background;
-    border: 2px solid #fabdcc;
-    border-radius: 50%;
-    display: inline-block;
-    height: 25px;
-    width: 25px;
+  color: white;
+  /* creating a custom design */
+  background-color: $primary-pink-background;
+  border: 2px solid #fabdcc;
+  border-radius: 50%;
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+}
+
+.option-row-options {
+  display: flex;
+  padding-top: 12px;
+
+  .option-row-gummies-content {
+    width: 50%;
+
+    .option-row-gummies-checkbox input[type="checkbox"] {
+      .option-row-gummies-label {
+        border: 2px solid #fabdcc;
+        padding-top: 1px;
+        color: #f37490;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 14px;
+        height: 18px;
+        left: 0;
+        position: absolute;
+        top: 3px;
+        width: 18px;
+        transition: all 0.4s;
+        text-align: center;
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+
+        p {
+          margin-bottom: 0;
+          letter-spacing: 1px;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    p {
+      margin-bottom: 0;
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+
+    .option-row-gummies-description {
+      font-family: "ProximaNova-Light" !important;
+      font-weight: light;
+      font-size: 15px;
+      margin-bottom: 0;
+      font-family: sans-serif;
+      color: rgb(131, 129, 129);
+      font-weight: 200;
+      font-size: 15px;
+      margin-top: 0;
+      padding-left: 30px;
+    }
   }
 }

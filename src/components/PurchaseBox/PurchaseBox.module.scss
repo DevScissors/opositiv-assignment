@@ -1,26 +1,16 @@
 @import "../../variables.scss";
 
 .purchase-box-wrapper {
-  display: flex;
   width: 50%;
   margin: 0 25%;
   border: 1px solid $primary-container-pink-border;
-  flex-direction: column;
   border-radius: 12%;
-  text-align: center;
 
-  .option-row {
+  .purchase-box-option-row {
     display: flex;
-    justify-content: center;
-
-    .option-gummies {
-      display: flex;
-      background-color: blue;
-    }
-
-    .option-capsules {
-      display: flex;
-      background-color: red;
-    }
+    flex-direction: column;
+    padding: 16px;
+    justify-content: flex-start;
+    vertical-align: baseline;
   }
 }

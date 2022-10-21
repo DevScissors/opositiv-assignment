@@ -3,24 +3,28 @@ import styles from "./PurchaseTypeRow.module.scss";
 
 const PurchaseTypeRow = (props) => {
   return (
-    <div className={styles["quantity-row-wrapper"]}>
+    <div className={styles["purchase-type-row-wrapper"]}>
       <label>
         <input
-          className={"quantity-row-subscribe"}
+          className={"purchase-type-subscribe"}
           type="checkbox"
           checked={props.checked === "subscribe"}
-          onChange={props.onChange}
+          onChange={() => props.onChange("subscribe")}
         />
-        {"Subscribe & Save"}
+        <p>Subscribe & Save</p>
+        <p className="purchase-type-subscribe-caption">
+          Easy to cancel, anytime
+        </p>
       </label>
       <label>
         <input
-          className={"quantity-row-one-time"}
+          className={"purchase-type-one-time"}
           type="checkbox"
           checked={props.checked === "one-time"}
-          onChange={props.onChange}
+          onChange={() => props.onChange("one-time")}
         />
-        {"One Time"}
+        <p>One Time</p>
+        <p className="purchase-type-one-caption">One Time Purchase</p>
       </label>
     </div>
   );
