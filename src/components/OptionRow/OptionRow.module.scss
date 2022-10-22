@@ -3,6 +3,13 @@
 .option-row-header-wrapper {
   display: flex;
 
+  p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #555555;
+    font-family: "Apercu-Regular";
+  }
+
   .option-row-number {
     width: 30px;
   }
@@ -22,26 +29,75 @@
   }
 }
 
-input [type="checkbox"] {
-  color: white;
-  /* creating a custom design */
-  background-color: $primary-pink-background;
-  border: 2px solid #fabdcc;
-  border-radius: 50%;
-  display: inline-block;
-  height: 25px;
-  width: 25px;
-}
-
 .option-row-options {
   display: flex;
   padding-top: 12px;
 
-  .option-row-gummies-content {
+  .option-row-gummies-content,
+  .option-row-capsule-content {
     width: 50%;
 
-    .option-row-gummies-checkbox input[type="checkbox"] {
-      .option-row-gummies-label {
+    & div {
+      display: flex;
+      align-items: center;
+      height: 20px;
+    }
+
+    .option-row-gummies-checkbox-row input[type="checkbox"] {
+      visibility: hidden;
+    }
+
+    .option-row-capsule-checkbox-row input[type="checkbox"] {
+      visibility: hidden;
+    }
+
+    // .option-row-gummies-checkbox-row,
+    // .option-row-capsule-checkbox-row label {
+    //   background-color: #fff;
+    //   border: 2px solid #fabdcc;
+    //   padding-top: 1px;
+    //   color: #f37490;
+    //   border-radius: 50%;
+    //   cursor: pointer;
+    //   font-size: 14px;
+    //   height: 18px;
+    //   left: 0;
+    //   position: absolute;
+    //   top: 3px;
+    //   width: 18px;
+    //   transition: all 0.4s;
+    //   text-align: center;
+    //   margin-bottom: 0;
+    //   display: flex;
+    //   align-items: center;
+    // }
+
+    .option-row-gummies-checkbox-row,
+    .option-row-capsule-checkbox-row input[type="checkbox"]:checked + label {
+      background-color: #f37490;
+      border-color: #fabdcc;
+      color: white;
+    }
+
+    .option-row-gummies-checkbox-row,
+    .option-row-capsule-checkbox-row
+      input[type="checkbox"]:checked
+      + label:before {
+      content: "&";
+      display: block;
+      position: absolute;
+      left: 15%;
+      right: 25%;
+      color: white;
+    }
+
+    .option-row-gummies-checkbox-row,
+    .option-row-capsule-checkbox-row {
+      position: relative;
+
+      .option-row-gummies-label-wrapper,
+      .option-row-capsule-label-wrapper {
+        background-color: #fff;
         border: 2px solid #fabdcc;
         padding-top: 1px;
         color: #f37490;
@@ -58,22 +114,17 @@ input [type="checkbox"] {
         margin-bottom: 0;
         display: flex;
         align-items: center;
+      }
 
-        p {
-          margin-bottom: 0;
-          letter-spacing: 1px;
-          white-space: nowrap;
-        }
+      p {
+        margin-bottom: 0;
+        letter-spacing: 1px;
+        white-space: nowrap;
       }
     }
 
-    p {
-      margin-bottom: 0;
-      letter-spacing: 1px;
-      white-space: nowrap;
-    }
-
-    .option-row-gummies-description {
+    .option-row-gummies-description,
+    .option-row-capsule-description {
       font-family: "ProximaNova-Light" !important;
       font-weight: light;
       font-size: 15px;
@@ -86,4 +137,11 @@ input [type="checkbox"] {
       padding-left: 30px;
     }
   }
+}
+
+input[type="checkbox"] {
+  display: inline;
+  margin: 0 8px 0 0;
+  padding: 0;
+  width: auto;
 }

@@ -24,13 +24,11 @@ const PurchaseBox = () => {
 
   return (
     <div className={styles["purchase-box-wrapper"]}>
-      <div className={styles["purchase-box-option-row"]}>
-        <OptionRow
-          onChange={handleOptionChange}
-          checked={optionSelected}
-          shape={"circle"}
-        />
-      </div>
+      <OptionRow
+        onChange={handleOptionChange}
+        checked={optionSelected}
+        shape={"circle"}
+      />
       <PurchaseTypeRow
         onChange={handlePurchaseTypeChange}
         checked={purchaseTypeSelected}
