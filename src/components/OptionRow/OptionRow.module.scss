@@ -43,78 +43,57 @@
       height: 20px;
     }
 
-    .option-row-gummies-checkbox-row input[type="checkbox"] {
-      visibility: hidden;
-    }
-
-    .option-row-capsule-checkbox-row input[type="checkbox"] {
-      visibility: hidden;
-    }
-
-    // .option-row-gummies-checkbox-row,
-    // .option-row-capsule-checkbox-row label {
-    //   background-color: #fff;
-    //   border: 2px solid #fabdcc;
-    //   padding-top: 1px;
-    //   color: #f37490;
-    //   border-radius: 50%;
-    //   cursor: pointer;
-    //   font-size: 14px;
-    //   height: 18px;
-    //   left: 0;
-    //   position: absolute;
-    //   top: 3px;
-    //   width: 18px;
-    //   transition: all 0.4s;
-    //   text-align: center;
-    //   margin-bottom: 0;
-    //   display: flex;
-    //   align-items: center;
+    // .option-row-gummies-checkbox-row input[type="checkbox"] {
+    //   visibility: hidden;
     // }
 
-    .option-row-gummies-checkbox-row,
-    .option-row-capsule-checkbox-row input[type="checkbox"]:checked + label {
-      background-color: #f37490;
-      border-color: #fabdcc;
-      color: white;
-    }
+    // .option-row-capsule-checkbox-row input[type="checkbox"] {
+    //   visibility: hidden;
+    // }
 
-    .option-row-gummies-checkbox-row,
-    .option-row-capsule-checkbox-row
-      input[type="checkbox"]:checked
-      + label:before {
-      content: "&";
-      display: block;
-      position: absolute;
-      left: 15%;
-      right: 25%;
-      color: white;
-    }
+    // .option-row-gummies-checkbox-row,
+    // .option-row-capsule-checkbox-row input[type="checkbox"]:checked + label {
+    //   background-color: #f37490;
+    //   border-color: #fabdcc;
+    //   color: white;
+    // }
+
+    // .option-row-gummies-checkbox-row,
+    // .option-row-capsule-checkbox-row
+    //   input[type="checkbox"]:checked
+    //   + label:before {
+    //   content: "&";
+    //   display: block;
+    //   position: absolute;
+    //   left: 15%;
+    //   right: 25%;
+    //   color: white;
+    // }
 
     .option-row-gummies-checkbox-row,
     .option-row-capsule-checkbox-row {
       position: relative;
 
-      .option-row-gummies-label-wrapper,
-      .option-row-capsule-label-wrapper {
-        background-color: #fff;
-        border: 2px solid #fabdcc;
-        padding-top: 1px;
-        color: #f37490;
-        border-radius: 50%;
-        cursor: pointer;
-        font-size: 14px;
-        height: 18px;
-        left: 0;
-        position: absolute;
-        top: 3px;
-        width: 18px;
-        transition: all 0.4s;
-        text-align: center;
-        margin-bottom: 0;
-        display: flex;
-        align-items: center;
-      }
+      // .option-row-gummies-label-wrapper,
+      // .option-row-capsule-label-wrapper {
+      //   background-color: #fff;
+      //   border: 2px solid #fabdcc;
+      //   padding-top: 1px;
+      //   color: #f37490;
+      //   border-radius: 50%;
+      //   cursor: pointer;
+      //   font-size: 14px;
+      //   height: 18px;
+      //   left: 0;
+      //   position: absolute;
+      //   top: 3px;
+      //   width: 18px;
+      //   transition: all 0.4s;
+      //   text-align: center;
+      //   margin-bottom: 0;
+      //   display: flex;
+      //   align-items: center;
+      // }
 
       p {
         margin-bottom: 0;
