@@ -1,0 +1,98 @@
+.option-row-wrapper {
+  border-bottom: 1px solid #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.option-row-wrapper .option-row-header-wrapper {
+  color: #2f4f4f;
+  display: flex;
+  font-weight: 500;
+}
+.option-row-wrapper .option-row-header-wrapper p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #555555;
+  font-family: "Apercu-Regular";
+}
+.option-row-wrapper .option-row-header-wrapper .option-row-number {
+  width: 30px;
+}
+.option-row-wrapper .option-row-header-wrapper .option-row-number,
+.option-row-wrapper .option-row-header-wrapper .option-row-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #555555;
+  font-family: "Apercu-Regular";
+}
+.option-row-wrapper .option-row-header-wrapper p {
+  margin: 0;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+.option-row-wrapper .option-row-options {
+  display: flex;
+  padding-top: 12px;
+}
+.option-row-wrapper .option-row-options .option-row-gummies-content,
+.option-row-wrapper .option-row-options .option-row-capsule-content {
+  width: 50%;
+}
+.option-row-wrapper .option-row-options .option-row-gummies-content .option-row-gummies-checkbox-row,
+.option-row-wrapper .option-row-options .option-row-gummies-content .option-row-capsule-checkbox-row,
+.option-row-wrapper .option-row-options .option-row-capsule-content .option-row-gummies-checkbox-row,
+.option-row-wrapper .option-row-options .option-row-capsule-content .option-row-capsule-checkbox-row {
+  position: relative;
+}
+.option-row-wrapper .option-row-options .option-row-gummies-content .option-row-gummies-checkbox-row .option-row-gummies-label-wrapper,
+.option-row-wrapper .option-row-options .option-row-gummies-content .option-row-gummies-checkbox-row .option-row-capsule-label-wrapper,
+.option-row-wrapper .option-row-options .option-row-gummies-content .option-row-capsule-checkbox-row .option-row-gummies-label-wrapper,
+.option-row-wrapper .option-row-options .option-row-gummies-content .option-row-capsule-checkbox-row .option-row-capsule-label-wrapper,
+.option-row-wrapper .option-row-options .option-row-capsule-content .option-row-gummies-checkbox-row .option-row-gummies-label-wrapper,
+.option-row-wrapper .option-row-options .option-row-capsule-content .option-row-gummies-checkbox-row .option-row-capsule-label-wrapper,
+.option-row-wrapper .option-row-options .option-row-capsule-content .option-row-capsule-checkbox-row .option-row-gummies-label-wrapper,
+.option-row-wrapper .option-row-options .option-row-capsule-content .option-row-capsule-checkbox-row .option-row-capsule-label-wrapper {
+  background-color: #fff;
+  border: 2px solid #fabdcc;
+  padding-top: 1px;
+  color: #f37490;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  height: 18px;
+  left: 0;
+  position: absolute;
+  top: 3px;
+  width: 18px;
+  transition: all 0.4s;
+  text-align: center;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+.option-row-wrapper .option-row-options .option-row-gummies-content .option-row-gummies-checkbox-row p,
+.option-row-wrapper .option-row-options .option-row-gummies-content .option-row-capsule-checkbox-row p,
+.option-row-wrapper .option-row-options .option-row-capsule-content .option-row-gummies-checkbox-row p,
+.option-row-wrapper .option-row-options .option-row-capsule-content .option-row-capsule-checkbox-row p {
+  margin-bottom: 0;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+.option-row-wrapper .option-row-options .option-row-gummies-content .option-row-gummies-description,
+.option-row-wrapper .option-row-options .option-row-gummies-content .option-row-capsule-description,
+.option-row-wrapper .option-row-options .option-row-capsule-content .option-row-gummies-description,
+.option-row-wrapper .option-row-options .option-row-capsule-content .option-row-capsule-description {
+  font-family: "ProximaNova-Light" !important;
+  font-weight: light;
+  font-size: 15px;
+  margin-bottom: 0;
+  font-family: sans-serif;
+  color: rgb(131, 129, 129);
+  font-weight: 200;
+  font-size: 15px;
+  margin-top: 0;
+  padding-left: 30px;
+}
+
+/*# sourceMappingURL=OptionRow.module.css.map */

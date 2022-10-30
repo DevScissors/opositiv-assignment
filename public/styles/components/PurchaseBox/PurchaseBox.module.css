@@ -1,0 +1,15 @@
+.purchase-box-wrapper {
+  width: 50%;
+  margin: 0 25%;
+  border: 1px solid #fce9ed;
+  border-radius: 12px;
+  padding: 16px;
+}
+.purchase-box-wrapper .purchase-box-option-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  vertical-align: baseline;
+}
+
+/*# sourceMappingURL=PurchaseBox.module.css.map */

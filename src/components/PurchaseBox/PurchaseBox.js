@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import OptionRow from "../OptionRow/OptionRow";
 import PurchaseTypeRow from "../PurchaseTypeRow/PurchaseTypeRow";
-import Button from "../Button/Button";
+import Button from "../shared/Button/Button";
 import styles from "./PurchaseBox.module.scss";
 import QuantityRow from "../QuantityRow/QuantityRow";
 
@@ -11,30 +11,31 @@ const PurchaseBox = () => {
   let [selectedQuantity, setSelectedQuantity] = useState(1);
 
   const handleOptionChange = (checkedValue) => {
-    setSelectedOption(checkedValue);
+    setSelectedOption(checkedValue.target.value);
   };
 
   const handlePurchaseTypeChange = (checkedValue) => {
-    setSelectedPurchaseType(checkedValue);
+    setSelectedPurchaseType(checkedValue.target.value);
   };
 
   const handleQuantityChange = (checkedValue) => {
-    setSelectedQuantity(checkedValue);
+    setSelectedQuantity(checkedValue.target.value);
   };
 
   return (
     <div className={styles["purchase-box-wrapper"]}>
       <OptionRow
         onChange={handleOptionChange}
+        value={optionSelected}
         checked={optionSelected}
-        shape={"circle"}
       />
       <PurchaseTypeRow
         onChange={handlePurchaseTypeChange}
+        value={purchaseTypeSelected}
         checked={purchaseTypeSelected}
       />
       <QuantityRow onChange={handleQuantityChange} checked={selectedQuantity} />
-      <Button color={"pink"} />
+      <Button color="pink" />
     </div>
   );
 };

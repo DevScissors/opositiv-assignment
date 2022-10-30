@@ -1,0 +1,37 @@
+.App {
+  align-items: center;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+input {
+  appearance: none;
+  background: white;
+  border: 2px solid lightgray;
+  cursor: pointer;
+  height: 16px;
+  transition: background-color 500ms;
+  width: 16px;
+}
+input:checked {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' viewBox='0 0 24 24'%3E%3Cpath fill='%23ffffff' d='M21 6.285l-11.16 12.733-6.84-6.018 1.319-1.49 5.341 4.686 9.865-11.196 1.475 1.285z'/%3E%3C/svg%3E"), lightcoral;
+}
+input[type=radio] {
+  border-radius: 50%;
+}
+input[type=checkbox] {
+  border-radius: 5px;
+  height: 20px;
+  width: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=App.module.css.map */

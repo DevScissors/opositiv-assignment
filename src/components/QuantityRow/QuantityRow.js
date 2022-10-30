@@ -8,7 +8,7 @@ const QuantityRow = (props) => {
       <p className="quantity-row-number">3.</p>
       <p className="quantity-row-label">Quantity</p>
       <input
-        className={"quantity-row-opt1"}
+        className="quantity-row-opt1"
         type="checkbox"
         checked={props.checked === 1}
         onChange={() => props.onChange(1)}
@@ -16,7 +16,7 @@ const QuantityRow = (props) => {
       />
       <label>1</label>
       <input
-        className={"quantity-row-opt2"}
+        className="quantity-row-opt2"
         type="checkbox"
         checked={props.checked === 2}
         onChange={() => props.onChange(2)}
@@ -24,7 +24,7 @@ const QuantityRow = (props) => {
       />
       <label>2</label>
       <input
-        className={"quantity-row-opt3"}
+        className="quantity-row-opt3"
         type="checkbox"
         checked={props.checked === 3}
         onChange={() => props.onChange(3)}
