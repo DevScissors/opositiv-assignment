@@ -4,7 +4,7 @@ import Button from "./components/shared/Button/Button";
 
 import styles from "./App.module.scss";
 
-function App(props) {
+function App() {
   const [optionSelected, setSelectedOption] = useState("capsule");
   const [purchaseTypeSelected, setSelectedPurchaseType] = useState("subscribe");
   let [selectedQuantity, setSelectedQuantity] = useState(1);
@@ -33,7 +33,7 @@ function App(props) {
       />
       <Button
         classNameOverride="btn-cart-submit"
-        label={`ADD TO CART ${selectedQuantity}`}
+        label={`ADD TO CART - ${selectedQuantity}`}
         color="pink"
       />
     </div>
