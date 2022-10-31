@@ -10,31 +10,14 @@
   .option-row-header-wrapper {
     color: #2f4f4f;
     display: flex;
-    font-weight: 500;
+  }
 
-    p {
-      font-size: 20px;
-      font-weight: bold;
-      color: #555555;
-      font-family: "Apercu-Regular";
-    }
+  .option-row-header-wrapper > p {
+    font-size: 20px;
+    color: #555555;
 
-    .option-row-number {
+    &:first-child {
       width: 30px;
-    }
-
-    .option-row-number,
-    .option-row-title {
-      font-size: 20px;
-      font-weight: bold;
-      color: #555555;
-      font-family: "Apercu-Regular";
-    }
-
-    p {
-      margin: 0;
-      letter-spacing: 1px;
-      white-space: nowrap;
     }
   }
 
@@ -43,50 +26,25 @@
     margin-bottom: 10px;
     justify-content: space-between;
 
+    .option-row-capsule-content {
+      border-left: 1px solid #fce9ed;
+      padding-left: 16px;
+    }
+
     .option-row-gummies-content,
     .option-row-capsule-content {
-      .option-gummies-radio-row,
-      .option-capsule-radio-row {
-        .option-row-gummies-label-wrapper,
-        .option-row-capsule-label-wrapper {
-          background-color: #fff;
-          border: 2px solid #fabdcc;
-          padding-top: 1px;
-          color: #f37490;
-          border-radius: 50%;
-          cursor: pointer;
-          font-size: 14px;
-          height: 18px;
-          left: 0;
-          position: absolute;
-          top: 3px;
-          width: 18px;
-          transition: all 0.4s;
-          text-align: center;
-          margin-bottom: 0;
-          display: flex;
-          align-items: center;
-        }
+      width: 50%;
 
-        p {
-          margin-bottom: 0;
-          letter-spacing: 1px;
-          white-space: nowrap;
-        }
+      & div {
+        display: flex;
+        column-gap: 12px;
       }
 
       .option-row-gummies-description,
       .option-row-capsule-description {
-        font-family: "ProximaNova-Light" !important;
-        font-weight: light;
-        font-size: 15px;
-        margin-bottom: 0;
-        font-family: sans-serif;
-        color: rgb(131, 129, 129);
-        font-weight: 200;
-        font-size: 15px;
-        margin-top: 0;
-        padding-left: 30px;
+        margin-left: 30px;
+        font-size: 12px;
+        color: $primary-description;
       }
     }
   }

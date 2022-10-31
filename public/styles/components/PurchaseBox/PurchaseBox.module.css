@@ -1,9 +1,30 @@
 .purchase-box-wrapper {
-  width: 50%;
+  width: 90%;
   margin: 0 25%;
   border: 1px solid #fce9ed;
   border-radius: 12px;
   padding: 16px;
+  background-color: #ffffff;
+}
+@media screen and (min-width: 576px) {
+  .purchase-box-wrapper {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .purchase-box-wrapper {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .purchase-box-wrapper {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .purchase-box-wrapper {
+    width: 30%;
+  }
 }
 .purchase-box-wrapper .purchase-box-option-row {
   display: flex;

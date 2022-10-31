@@ -2,17 +2,16 @@ import React from "react";
 
 const RadioButton = (props) => {
   return (
-    <label>
+    <div>
       <input
         label={props.label}
-        className={props.className}
         type="radio"
         checked={props.checked}
         onChange={props.onChange}
         value={props.value}
       />
-      <p className={`${props.label}-label`}>{props.label}</p>
-    </label>
+      <label for={props.value}>{props.label}</label>
+    </div>
   );
 };
 

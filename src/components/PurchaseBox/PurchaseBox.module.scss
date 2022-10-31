@@ -1,11 +1,28 @@
 @import "../../variables.scss";
 
 .purchase-box-wrapper {
-  width: 50%;
+  width: 90%;
   margin: 0 25%;
   border: 1px solid $primary-container-pink-border;
   border-radius: 12px;
   padding: 16px;
+  background-color: $primary-white;
+
+  @media screen and (min-width: 576px) {
+    width: 75%;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 60%;
+  }
+
+  @media screen and (min-width: 992px) {
+    width: 45%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 30%;
+  }
 
   .purchase-box-option-row {
     display: flex;
