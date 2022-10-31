@@ -8,6 +8,7 @@ function App() {
   const [optionSelected, setSelectedOption] = useState("capsule");
   const [purchaseTypeSelected, setSelectedPurchaseType] = useState("subscribe");
   let [selectedQuantity, setSelectedQuantity] = useState(1);
+  //need to rework states into objects in order to better utilize data
 
   const handleOptionChange = (checkedValue) => {
     setSelectedOption(checkedValue.target.value);

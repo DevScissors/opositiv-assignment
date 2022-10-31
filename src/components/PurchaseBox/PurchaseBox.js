@@ -5,22 +5,6 @@ import styles from "./PurchaseBox.module.scss";
 import QuantityRow from "../QuantityRow/QuantityRow";
 
 const PurchaseBox = (props) => {
-  // const [optionSelected, setSelectedOption] = useState("capsule");
-  // const [purchaseTypeSelected, setSelectedPurchaseType] = useState("subscribe");
-  // let [selectedQuantity, setSelectedQuantity] = useState(1);
-
-  // const handleOptionChange = (checkedValue) => {
-  //   setSelectedOption(checkedValue.target.value);
-  // };
-
-  // const handlePurchaseTypeChange = (checkedValue) => {
-  //   setSelectedPurchaseType(checkedValue.target.value);
-  // };
-
-  // const handleQuantityChange = (checkedValue) => {
-  //   setSelectedQuantity(checkedValue);
-  // };
-
   return (
     <div className={styles["purchase-box-wrapper"]}>
       <OptionRow
