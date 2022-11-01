@@ -6,8 +6,8 @@ import styles from "./App.module.scss";
 
 function App() {
   const purchaseType = {
-    SUBSCRIPTION: "Subscription (every month)",
-    ONE_TIME: "One time",
+    SUBSCRIPTION: "subscribe",
+    ONE_TIME: "one-time",
   };
 
   const priceByPurchaseTypeAndQuantity = {
@@ -23,9 +23,15 @@ function App() {
     },
   };
 
+  const count = {
+    ONE: 1,
+    TWO: 2,
+    THREE: 3,
+  };
+
   const itemName = {
-    CAPSULE: "FLO - PMS Vitamin Capsule",
-    GUMMIES: "FLO - PMS Gummy Vitamins",
+    CAPSULE: "capsule",
+    GUMMIES: "gummies",
   };
 
   const [optionSelected, setSelectedOption] = useState(itemName.CAPSULE);
@@ -35,6 +41,7 @@ function App() {
   const [selectedQuantity, setSelectedQuantity] = useState(
     priceByPurchaseTypeAndQuantity[purchaseType.SUBSCRIPTION][1]
   );
+  const [countSelected, setCount] = useState(count.ONE);
 
   const handleOptionChange = (checkedValue) => {
     setSelectedOption(checkedValue.target.value);
@@ -44,8 +51,12 @@ function App() {
     setSelectedPurchaseType(checkedValue.target.value);
   };
 
-  const handleQuantityChange = (checkedValue) => {
-    setSelectedQuantity(checkedValue);
+  const handleQuantityChange = (countSelected) => {
+    setSelectedQuantity(countSelected);
+  };
+
+  const handleCountSelected = () => {
+    setCount(count);
   };
 
   return (
@@ -54,9 +65,11 @@ function App() {
         optionSelected={optionSelected}
         purchaseTypeSelected={purchaseTypeSelected}
         selectedQuantity={selectedQuantity}
+        countSelected={countSelected}
         handleOptionChange={handleOptionChange}
         handlePurchaseTypeChange={handlePurchaseTypeChange}
         handleQuantityChange={handleQuantityChange}
+        handleCountSelected={handleCountSelected}
       />
       <Button
         classNameOverride={styles["btn-cart-submit"]}

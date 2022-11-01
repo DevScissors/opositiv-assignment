@@ -18,7 +18,7 @@ const PurchaseTypeRow = (props) => {
               type="radio"
               checked={props.checked === "subscribe"}
               onChange={props.onChange}
-              value="subscribe"
+              value="Subscription (every month)"
             />
             <div
               className={styles["purchase-type-subscribe-description-wrapper"]}
@@ -59,7 +59,7 @@ const PurchaseTypeRow = (props) => {
               type="radio"
               checked={props.checked === "one-time"}
               onChange={props.onChange}
-              value="one-time"
+              value="One time"
             />
             <div
               className={styles["purchase-type-one-time-description-wrapper"]}

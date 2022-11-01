@@ -8,19 +8,20 @@ const PurchaseBox = (props) => {
   return (
     <div className={styles["purchase-box-wrapper"]}>
       <OptionRow
-        handleOptionChange={props.handleOptionChange}
+        onChange={props.handleOptionChange}
         value={props.optionSelected}
-        checked={props.optionSelected}
+        checked={props.checked}
       />
       <PurchaseTypeRow
         onChange={props.handlePurchaseTypeChange}
         value={props.purchaseTypeSelected}
-        checked={props.purchaseTypeSelected}
+        checked={props.checked}
         selectedQuantity={props.selectedQuantity}
       />
       <QuantityRow
         onChange={props.handleQuantityChange}
         checked={props.selectedQuantity}
+        countSelected={props.countSelected}
       />
     </div>
   );
