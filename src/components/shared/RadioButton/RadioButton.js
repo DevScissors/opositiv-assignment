@@ -10,7 +10,7 @@ const RadioButton = (props) => {
         onChange={props.onChange}
         value={props.value}
       />
-      <label for={props.value}>{props.label}</label>
+      <label htmlFor={props.value}>{props.label}</label>
     </div>
   );
 };

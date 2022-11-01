@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import OptionRow from "../OptionRow/OptionRow";
 import PurchaseTypeRow from "../PurchaseTypeRow/PurchaseTypeRow";
 import styles from "./PurchaseBox.module.scss";
@@ -8,7 +8,7 @@ const PurchaseBox = (props) => {
   return (
     <div className={styles["purchase-box-wrapper"]}>
       <OptionRow
-        onChange={props.handleOptionChange}
+        handleOptionChange={props.handleOptionChange}
         value={props.optionSelected}
         checked={props.optionSelected}
       />

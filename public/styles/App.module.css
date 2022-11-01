@@ -1,3 +1,19 @@
+* {
+  box-sizing: border-box;
+  font-family: Open Sans, Helvetica Neue, sans-serif;
+  letter-spacing: 1.5px;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  padding: 0;
+  cursor: pointer;
+}
+
 .App {
   align-items: center;
   background-color: #f7f7f7;
@@ -7,6 +23,19 @@
   height: 100vh;
   justify-content: center;
   width: 100vw;
+}
+.App .btn-cart-submit {
+  background: #f08080;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  box-shadow: 5px 3px #d3d3d3;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  height: 45px;
+  padding: 0 16px;
+  width: 250px;
 }
 
 input {
@@ -28,14 +57,6 @@ input[type=checkbox] {
   border-radius: 5px;
   height: 20px;
   width: 20px;
-}
-
-* {
-  box-sizing: border-box;
-  font-family: Open Sans, Helvetica Neue, sans-serif;
-  letter-spacing: 1.5px;
-  margin: 0;
-  padding: 0;
 }
 
 /*# sourceMappingURL=App.module.css.map */
