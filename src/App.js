@@ -36,9 +36,9 @@ function App() {
     priceByPurchaseTypeAndQuantity[purchaseType.SUBSCRIPTION][1]
   );
 
-  // const handleOptionChange = (checkedValue) => {
-  //   setSelectedOption(checkedValue.target.value);
-  // };
+  const handleOptionChange = (checkedValue) => {
+    setSelectedOption(checkedValue.target.value);
+  };
 
   const handlePurchaseTypeChange = (checkedValue) => {
     setSelectedPurchaseType(checkedValue.target.value);
@@ -48,22 +48,19 @@ function App() {
     setSelectedQuantity(checkedValue);
   };
 
-  console.log("Option selected " + optionSelected);
-
   return (
     <div className={styles.App}>
       <PurchaseBox
         optionSelected={optionSelected}
         purchaseTypeSelected={purchaseTypeSelected}
         selectedQuantity={selectedQuantity}
-        handleOptionChange={() => setSelectedOption(optionSelected)}
+        handleOptionChange={handleOptionChange}
         handlePurchaseTypeChange={handlePurchaseTypeChange}
         handleQuantityChange={handleQuantityChange}
       />
       <Button
-        classNameOverride="btn-cart-submit"
+        classNameOverride={styles["btn-cart-submit"]}
         label={`ADD TO CART - ${selectedQuantity}`}
-        color="pink"
       />
     </div>
   );

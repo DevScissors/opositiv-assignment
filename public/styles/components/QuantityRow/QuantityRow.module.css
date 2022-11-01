@@ -1,3 +1,37 @@
-
+.quantity-row-wrapper .quantity-row-header-wrapper {
+  display: flex;
+  font-size: 20px;
+  color: #555550;
+  justify-content: space-between;
+}
+.quantity-row-wrapper .quantity-row-header-wrapper .quantity-row-header {
+  display: flex;
+}
+.quantity-row-wrapper .quantity-row-header-wrapper .quantity-row-header > p:first-child {
+  width: 30px;
+}
+.quantity-row-wrapper .btn-quantity {
+  background-color: white;
+  border: 2px solid lightcoral;
+  border-radius: 16px;
+  color: lightcoral;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  height: 32px;
+  margin-left: 10px;
+  width: 40px;
+}
+.quantity-row-wrapper.btn-quantity-active {
+  background-color: lightcoral;
+  border: 2px solid lightgray;
+  color: white;
+  outline: none;
+}
+.quantity-row-wrapper .quantity-row-description {
+  color: #838181;
+  font-size: 12px;
+  margin-left: 30px;
+}
 
 /*# sourceMappingURL=QuantityRow.module.css.map */

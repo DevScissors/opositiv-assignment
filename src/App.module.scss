@@ -1,17 +1,11 @@
+@import "../src/variables.scss";
+
 * {
   box-sizing: border-box;
   font-family: Open Sans, Helvetica Neue, sans-serif;
   letter-spacing: 1.5px;
   margin: 0;
   padding: 0;
-}
-
-button {
-  border: none;
-  background-color: transparent;
-  font-family: inherit;
-  padding: 0;
-  cursor: pointer;
 }
 
 .App {
@@ -25,7 +19,7 @@ button {
   width: 100vw;
 
   .btn-cart-submit {
-    background: #f08080;
+    background: $primary-button-background-pink;
     border: 1px solid #fff;
     border-radius: 20px;
     box-shadow: 5px 3px #d3d3d3;

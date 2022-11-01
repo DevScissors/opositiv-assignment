@@ -16,7 +16,7 @@ const OptionRow = (props, itemName) => {
             label="Gummies"
             type="radio"
             checked={itemName === itemName.GUMMIES}
-            onChange={props.handleOptionChange}
+            onChange={props.onChange}
             value="gummies"
           />
           <p className={styles["option-row-gummies-description"]}>Strawberry</p>
@@ -26,7 +26,7 @@ const OptionRow = (props, itemName) => {
             label="Capsule"
             type="radio"
             checked={itemName === itemName.CAPSULE}
-            onChange={props.handleOptionChange}
+            onChange={props.onChange}
             value="capsule"
           />
           <p className={styles["option-row-capsule-description"]}>Sugar-Free</p>
