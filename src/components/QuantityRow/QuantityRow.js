@@ -50,7 +50,7 @@ const QuantityRow = (props) => {
             //     }`
             //   ]
             // }
-            onClick={() => props.onClick(3)} // Pretty much like that and see if it works
+            onClick={() => props.onClick(3)}
             label="3"
           />
         </div>

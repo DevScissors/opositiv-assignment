@@ -12,9 +12,9 @@
 }
 .quantity-row-wrapper .btn-quantity {
   background-color: white;
-  border: 2px solid lightcoral;
+  border: 2px solid #f37490;
   border-radius: 16px;
-  color: lightcoral;
+  color: #f37490;
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
@@ -23,7 +23,7 @@
   width: 40px;
 }
 .quantity-row-wrapper .btn-quantity-active {
-  background-color: lightcoral;
+  background-color: #f37490;
   border: 2px solid lightgray;
   color: white;
   outline: none;
