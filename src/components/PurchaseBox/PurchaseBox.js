@@ -10,7 +10,7 @@ const PurchaseBox = (props) => {
       <OptionRow
         onChange={props.handleOptionChange}
         value={props.optionSelected}
-        checked={props.checked}
+        checked={props.optionSelected}
       />
       <PurchaseTypeRow
         onChange={props.handlePurchaseTypeChange}

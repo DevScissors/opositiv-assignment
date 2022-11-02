@@ -44,7 +44,7 @@ function App() {
   const [countSelected, setCount] = useState(count.ONE);
 
   const handleOptionChange = (checkedValue) => {
-    setSelectedOption(checkedValue.target.value);
+    setSelectedOption(checkedValue.target.checked);
   };
 
   const handlePurchaseTypeChange = (checkedValue) => {
