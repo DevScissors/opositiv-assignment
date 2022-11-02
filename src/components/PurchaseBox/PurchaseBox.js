@@ -9,7 +9,6 @@ const PurchaseBox = (props) => {
     <div className={styles["purchase-box-wrapper"]}>
       <OptionRow
         onChange={props.handleOptionChange}
-        value={props.optionSelected}
         checked={props.optionSelected}
       />
       <PurchaseTypeRow
