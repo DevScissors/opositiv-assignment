@@ -49,6 +49,7 @@ function App() {
 
   const handlePurchaseTypeChange = (checkedValue) => {
     setSelectedPurchaseType(checkedValue.target.value);
+    setSelectedQuantity(selectedQuantity);
   };
 
   const handleQuantityChange = (countSelected) => {
@@ -57,6 +58,10 @@ function App() {
     );
     setCount(countSelected);
   };
+
+  const quantityOneSubscription =
+    priceByPurchaseTypeAndQuantity[purchaseType.SUBSCRIPTION][1];
+  const quantityPrice = priceByPurchaseTypeAndQuantity[purchaseTypeSelected][1];
 
   return (
     <div className={styles.App}>
@@ -71,16 +76,21 @@ function App() {
       />
       <Button
         classNameOverride={styles["btn-cart-submit"]}
-        label={`ADD TO CART - $${(
-          <span className={styles["cart-original-price"]}>
-            {priceByPurchaseTypeAndQuantity[purchaseTypeSelected][1] *
-              countSelected}
-          </span>
-        )} $${(
-          <span className={styles["cart-promotional-price"]}>
-            ${selectedQuantity * countSelected}
-          </span>
-        )} `}
+        label={"ADD TO CART - "}
+        span={
+          <>
+            <span className={styles["cart-original-price"]}>
+              {/* {selectedQuantity ===
+              priceByPurchaseTypeAndQuantity[purchaseType.SUBSCRIPTION][1]
+                ? ""
+                : quantityPrice * countSelected} */}
+              {quantityPrice * countSelected}
+            </span>
+            <span className={styles["cart-promotional-price"]}>
+              {selectedQuantity * countSelected}
+            </span>
+          </>
+        }
       />
     </div>
   );
