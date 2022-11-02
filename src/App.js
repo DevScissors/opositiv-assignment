@@ -52,11 +52,10 @@ function App() {
   };
 
   const handleQuantityChange = (countSelected) => {
-    setSelectedQuantity(countSelected);
-  };
-
-  const handleCountSelected = () => {
-    setCount(count);
+    setSelectedQuantity(
+      priceByPurchaseTypeAndQuantity[purchaseTypeSelected][countSelected]
+    );
+    setCount(countSelected);
   };
 
   return (
@@ -69,11 +68,19 @@ function App() {
         handleOptionChange={handleOptionChange}
         handlePurchaseTypeChange={handlePurchaseTypeChange}
         handleQuantityChange={handleQuantityChange}
-        handleCountSelected={handleCountSelected}
       />
       <Button
         classNameOverride={styles["btn-cart-submit"]}
-        label={`ADD TO CART - ${selectedQuantity}`}
+        label={`ADD TO CART - $${(
+          <span className={styles["cart-original-price"]}>
+            {priceByPurchaseTypeAndQuantity[purchaseTypeSelected][1] *
+              countSelected}
+          </span>
+        )} $${(
+          <span className={styles["cart-promotional-price"]}>
+            ${selectedQuantity * countSelected}
+          </span>
+        )} `}
       />
     </div>
   );

@@ -13,13 +13,13 @@ const PurchaseBox = (props) => {
       />
       <PurchaseTypeRow
         onChange={props.handlePurchaseTypeChange}
-        value={props.purchaseTypeSelected}
-        checked={props.checked}
-        selectedQuantity={props.selectedQuantity}
+        checked={props.purchaseTypeSelected}
+        quantity={props.selectedQuantity}
+        countSelected={props.countSelected}
       />
       <QuantityRow
-        onChange={props.handleQuantityChange}
-        checked={props.selectedQuantity}
+        onClick={props.handleQuantityChange}
+        quantity={props.selectedQuantity}
         countSelected={props.countSelected}
       />
     </div>

@@ -18,7 +18,7 @@ const PurchaseTypeRow = (props) => {
               type="radio"
               checked={props.checked === "subscribe"}
               onChange={props.onChange}
-              value="Subscription (every month)"
+              value="subscribe"
             />
             <div
               className={styles["purchase-type-subscribe-description-wrapper"]}
@@ -39,11 +39,11 @@ const PurchaseTypeRow = (props) => {
           </div>
           <div className={styles["purchase-type-subscribe-price-wrapper"]}>
             <p className={styles["purchase-type-subscribe-price"]}>
-              {props.selectedQuantity === 1
+              {props.countSelected === 1
                 ? "$26.99"
-                : props.selectedQuantity === 2
+                : props.countSelected === 2
                 ? "$24.99"
-                : props.selectedQuantity === 3
+                : props.countSelected === 3
                 ? "$24"
                 : "$26.99"}
             </p>
@@ -59,7 +59,7 @@ const PurchaseTypeRow = (props) => {
               type="radio"
               checked={props.checked === "one-time"}
               onChange={props.onChange}
-              value="One time"
+              value="one-time"
             />
             <div
               className={styles["purchase-type-one-time-description-wrapper"]}
@@ -71,11 +71,11 @@ const PurchaseTypeRow = (props) => {
           </div>
           <div className={styles["purchase-type-one-time-price-wrapper"]}>
             <p className={styles["purchase-type-one-time-price"]}>
-              {props.selectedQuantity === 1
+              {props.countSelected === 1
                 ? "$31.99"
-                : props.selectedQuantity === 2
+                : props.countSelected === 2
                 ? "$26.99"
-                : props.selectedQuantity === 3
+                : props.countSelected === 3
                 ? "$26"
                 : "$31.99"}
             </p>
