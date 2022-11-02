@@ -60,7 +60,9 @@ function App() {
   };
 
   const quantityOneSubscription =
-    priceByPurchaseTypeAndQuantity[purchaseType.SUBSCRIPTION][1];
+    priceByPurchaseTypeAndQuantity[purchaseType.SUBSCRIPTION][countSelected];
+  const quantityOneOneTime =
+    priceByPurchaseTypeAndQuantity[purchaseType.ONE_TIME][1];
   const quantityPrice = priceByPurchaseTypeAndQuantity[purchaseTypeSelected][1];
 
   return (
@@ -80,14 +82,15 @@ function App() {
         span={
           <>
             <span className={styles["cart-original-price"]}>
-              {/* {selectedQuantity ===
-              priceByPurchaseTypeAndQuantity[purchaseType.SUBSCRIPTION][1]
-                ? ""
-                : quantityPrice * countSelected} */}
-              {quantityPrice * countSelected}
+              {selectedQuantity === quantityOneSubscription &&
+              countSelected === 1
+                ? null
+                : selectedQuantity === quantityOneOneTime && countSelected === 1
+                ? null
+                : "$" + quantityPrice * countSelected}
             </span>
             <span className={styles["cart-promotional-price"]}>
-              {selectedQuantity * countSelected}
+              ${selectedQuantity * countSelected}
             </span>
           </>
         }
