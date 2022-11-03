@@ -39,7 +39,7 @@ const PurchaseTypeRow = (props) => {
           </div>
           <div className={styles["purchase-type-subscribe-price-wrapper"]}>
             <p className={styles["purchase-type-subscribe-price"]}>
-              {props.priceMap["subscribe"][props.countSelected]}
+              {`$${props.priceMap["subscribe"][props.countSelected]}`}
             </p>
             <p className={styles["purchase-type-subscribe-pricing-info"]}>
               /BOTTLE
@@ -65,7 +65,7 @@ const PurchaseTypeRow = (props) => {
           </div>
           <div className={styles["purchase-type-one-time-price-wrapper"]}>
             <p className={styles["purchase-type-one-time-price"]}>
-              {props.priceMap["one-time"][props.countSelected]}
+              {`$${props.priceMap["one-time"][props.countSelected]}`}
             </p>
             <p className={styles["purchase-type-one-time-pricing-info"]}>
               /BOTTLE
