@@ -32,6 +32,7 @@
 .purchase-type-row-wrapper .purchase-type-row-options .purchase-type-one-time-content-wrapper .purchase-type-one-time-content > div:first-child {
   display: flex;
   column-gap: 12px;
+  font-weight: 600;
 }
 .purchase-type-row-wrapper .purchase-type-row-options .purchase-type-subscribe-content-wrapper .purchase-type-subscribe-content .purchase-type-subscribe-description-wrapper,
 .purchase-type-row-wrapper .purchase-type-row-options .purchase-type-subscribe-content-wrapper .purchase-type-subscribe-content .purchase-type-one-time-description-wrapper,
@@ -81,6 +82,12 @@
 .purchase-type-row-wrapper .purchase-type-row-options .purchase-type-one-time-content-wrapper .purchase-type-one-time-price-wrapper .purchase-type-subscribe-pricing-info,
 .purchase-type-row-wrapper .purchase-type-row-options .purchase-type-one-time-content-wrapper .purchase-type-one-time-price-wrapper .purchase-type-one-time-pricing-info {
   color: #838181;
+}
+.purchase-type-row-wrapper .purchase-type-row-options .purchase-type-subscribe-content-wrapper .purchase-type-subscribe-price-wrapper p:first-child,
+.purchase-type-row-wrapper .purchase-type-row-options .purchase-type-subscribe-content-wrapper .purchase-type-one-time-price-wrapper p:first-child,
+.purchase-type-row-wrapper .purchase-type-row-options .purchase-type-one-time-content-wrapper .purchase-type-subscribe-price-wrapper p:first-child,
+.purchase-type-row-wrapper .purchase-type-row-options .purchase-type-one-time-content-wrapper .purchase-type-one-time-price-wrapper p:first-child {
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=PurchaseTypeRow.module.css.map */

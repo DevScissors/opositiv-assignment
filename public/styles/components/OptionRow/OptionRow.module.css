@@ -33,6 +33,7 @@
 .option-row-wrapper .option-row-options .option-row-capsule-content div {
   display: flex;
   column-gap: 12px;
+  font-weight: 600;
 }
 .option-row-wrapper .option-row-options .option-row-gummies-content .option-row-gummies-description,
 .option-row-wrapper .option-row-options .option-row-gummies-content .option-row-capsule-description,

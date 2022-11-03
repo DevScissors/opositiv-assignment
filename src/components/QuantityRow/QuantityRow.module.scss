@@ -6,6 +6,7 @@
     font-size: 20px;
     color: $primary-text-gray;
     justify-content: space-between;
+    margin-bottom: 10px;
 
     .quantity-row-header {
       display: flex;
@@ -42,5 +43,6 @@
     color: $primary-description;
     font-size: 12px;
     margin-left: 30px;
+    white-space: pre-wrap;
   }
 }

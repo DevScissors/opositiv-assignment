@@ -30,8 +30,8 @@ function App() {
   };
 
   const itemName = {
-    CAPSULE: "capsule",
-    GUMMIES: "gummies",
+    CAPSULE: "FLO - PMS Vitamin Capsule",
+    GUMMIES: "FLO - PMS Gummy Vitamins",
   };
 
   const [optionSelected, setSelectedOption] = useState(itemName.CAPSULE);
@@ -50,6 +50,12 @@ function App() {
 
   const handleQuantityChange = (countSelected) => {
     setCount(countSelected);
+  };
+
+  const updateCart = () => {
+    // valuesArray = [];
+    // return valuesArray.map((value) => value[optionSelected.value]);
+    return itemName.value;
   };
 
   return (
@@ -85,7 +91,7 @@ function App() {
             </span>
           </>
         }
-        onClick={() => alert("Test")}
+        onClick={() => alert(updateCart([]))}
       />
     </div>
   );

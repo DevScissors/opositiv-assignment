@@ -8,6 +8,7 @@ const QuantityRow = (props) => {
   const bottleDescription = [
     "1 bottle ships every month",
     "2 bottles ship every  2 months",
+    "Congrats, you've selected our best value!\n",
     "3 bottles ship every 3 months",
   ];
 
@@ -45,7 +46,9 @@ const QuantityRow = (props) => {
         </div>
       </div>
       <p className={styles["quantity-row-description"]}>
-        {bottleDescription[props.countSelected - 1]}
+        {props.countSelected === 3
+          ? bottleDescription[2] + bottleDescription[3]
+          : bottleDescription[props.countSelected - 1]}
       </p>
     </div>
   );

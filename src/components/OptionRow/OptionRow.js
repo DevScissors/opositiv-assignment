@@ -15,9 +15,9 @@ const OptionRow = (props) => {
           <RadioButton
             label="Gummies"
             type="radio"
-            checked={props.checked === "gummies"}
+            checked={props.checked === "FLO - PMS Gummy Vitamins"}
             onChange={props.onChange}
-            value="gummies"
+            value="FLO - PMS Gummy Vitamins"
           />
           <p className={styles["option-row-gummies-description"]}>Strawberry</p>
         </div>
@@ -25,9 +25,9 @@ const OptionRow = (props) => {
           <RadioButton
             label="Capsule"
             type="radio"
-            checked={props.checked === "capsule"}
+            checked={props.checked === "FLO - PMS Vitamin Capsule"}
             onChange={props.onChange}
-            value="capsule"
+            value="FLO - PMS Vitamin Capsule"
           />
           <p className={styles["option-row-capsule-description"]}>Sugar-Free</p>
         </div>
