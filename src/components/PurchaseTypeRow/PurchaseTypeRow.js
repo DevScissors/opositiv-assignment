@@ -2,8 +2,8 @@ import React from "react";
 import RadioButton from "../shared/RadioButton/RadioButton";
 
 import styles from "./PurchaseTypeRow.module.scss";
-
 const PurchaseTypeRow = (props) => {
+  // {checked : purchaseTypeSelected, onChange : handlePurchaseTypeChange, countSelected, priceMap : priceByPurchaseTypeAndQuantity}
   return (
     <div className={styles["purchase-type-row-wrapper"]}>
       <div className={styles["purchase-type-row-header-wrapper"]}>
@@ -39,13 +39,7 @@ const PurchaseTypeRow = (props) => {
           </div>
           <div className={styles["purchase-type-subscribe-price-wrapper"]}>
             <p className={styles["purchase-type-subscribe-price"]}>
-              {props.countSelected === 1
-                ? "$26.99"
-                : props.countSelected === 2
-                ? "$24.99"
-                : props.countSelected === 3
-                ? "$24"
-                : "$26.99"}
+              {props.priceMap["subscribe"][props.countSelected]}
             </p>
             <p className={styles["purchase-type-subscribe-pricing-info"]}>
               /BOTTLE
@@ -71,13 +65,7 @@ const PurchaseTypeRow = (props) => {
           </div>
           <div className={styles["purchase-type-one-time-price-wrapper"]}>
             <p className={styles["purchase-type-one-time-price"]}>
-              {props.countSelected === 1
-                ? "$31.99"
-                : props.countSelected === 2
-                ? "$26.99"
-                : props.countSelected === 3
-                ? "$26"
-                : "$31.99"}
+              {props.priceMap["one-time"][props.countSelected]}
             </p>
             <p className={styles["purchase-type-one-time-pricing-info"]}>
               /BOTTLE

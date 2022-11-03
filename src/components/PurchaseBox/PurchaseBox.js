@@ -14,12 +14,11 @@ const PurchaseBox = (props) => {
       <PurchaseTypeRow
         onChange={props.handlePurchaseTypeChange}
         checked={props.purchaseTypeSelected}
-        quantity={props.selectedQuantity}
         countSelected={props.countSelected}
+        priceMap={props.priceMap}
       />
       <QuantityRow
         onClick={props.handleQuantityChange}
-        quantity={props.selectedQuantity}
         countSelected={props.countSelected}
       />
     </div>
