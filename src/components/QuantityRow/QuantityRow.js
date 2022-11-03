@@ -45,11 +45,13 @@ const QuantityRow = (props) => {
           />
         </div>
       </div>
-      <p className={styles["quantity-row-description"]}>
-        {props.countSelected === 3
-          ? bottleDescription[2] + bottleDescription[3]
-          : bottleDescription[props.countSelected - 1]}
-      </p>
+      {props.purchaseType === "one-time" ? null : (
+        <p className={styles["quantity-row-description"]}>
+          {props.countSelected === 3
+            ? bottleDescription[2] + bottleDescription[3]
+            : bottleDescription[props.countSelected - 1]}
+        </p>
+      )}
     </div>
   );
 };

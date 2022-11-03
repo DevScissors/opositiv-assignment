@@ -20,6 +20,7 @@ const PurchaseBox = (props) => {
       <QuantityRow
         onClick={props.handleQuantityChange}
         countSelected={props.countSelected}
+        purchaseType={props.purchaseTypeSelected}
       />
     </div>
   );

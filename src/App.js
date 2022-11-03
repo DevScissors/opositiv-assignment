@@ -53,9 +53,13 @@ function App() {
   };
 
   const updateCart = () => {
-    // valuesArray = [];
-    // return valuesArray.map((value) => value[optionSelected.value]);
-    return itemName.value;
+    const valuesArray = ["Item Name | Type | Count\n"];
+    return valuesArray
+      .map(() => [
+        ...valuesArray,
+        `${optionSelected} | ${purchaseTypeSelected} | ${countSelected}\n`,
+      ])
+      .join("");
   };
 
   return (
@@ -91,7 +95,7 @@ function App() {
             </span>
           </>
         }
-        onClick={() => alert(updateCart([]))}
+        onClick={() => alert(updateCart())}
       />
     </div>
   );
