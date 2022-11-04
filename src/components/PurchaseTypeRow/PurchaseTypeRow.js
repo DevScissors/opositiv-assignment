@@ -2,8 +2,7 @@ import React from "react";
 import RadioButton from "../shared/RadioButton/RadioButton";
 
 import styles from "./PurchaseTypeRow.module.scss";
-const PurchaseTypeRow = (props) => {
-  // {checked : purchaseTypeSelected, onChange : handlePurchaseTypeChange, countSelected, priceMap : priceByPurchaseTypeAndQuantity}
+const PurchaseTypeRow = ({ checked, onChange, countSelected, priceMap }) => {
   return (
     <div className={styles["purchase-type-row-wrapper"]}>
       <div className={styles["purchase-type-row-header-wrapper"]}>
@@ -16,8 +15,8 @@ const PurchaseTypeRow = (props) => {
             <RadioButton
               label="Subscribe & Save"
               type="radio"
-              checked={props.checked === "subscribe"}
-              onChange={props.onChange}
+              checked={checked === "subscribe"}
+              onChange={onChange}
               value="subscribe"
             />
             <div
@@ -39,7 +38,7 @@ const PurchaseTypeRow = (props) => {
           </div>
           <div className={styles["purchase-type-subscribe-price-wrapper"]}>
             <p className={styles["purchase-type-subscribe-price"]}>
-              {`$${props.priceMap["subscribe"][props.countSelected]}`}
+              {`$${priceMap["subscribe"][countSelected]}`}
             </p>
             <p className={styles["purchase-type-subscribe-pricing-info"]}>
               /BOTTLE
@@ -51,8 +50,8 @@ const PurchaseTypeRow = (props) => {
             <RadioButton
               label="One Time"
               type="radio"
-              checked={props.checked === "one-time"}
-              onChange={props.onChange}
+              checked={checked === "one-time"}
+              onChange={onChange}
               value="one-time"
             />
             <div
@@ -65,7 +64,7 @@ const PurchaseTypeRow = (props) => {
           </div>
           <div className={styles["purchase-type-one-time-price-wrapper"]}>
             <p className={styles["purchase-type-one-time-price"]}>
-              {`$${props.priceMap["one-time"][props.countSelected]}`}
+              {`$${priceMap["one-time"][countSelected]}`}
             </p>
             <p className={styles["purchase-type-one-time-pricing-info"]}>
               /BOTTLE

@@ -85,7 +85,8 @@ function App() {
             <span className={styles["cart-original-price"]}>
               {purchaseTypeSelected === "subscribe"
                 ? "$" +
-                  priceByPurchaseTypeAndQuantity["one-time"][1] * countSelected
+                  priceByPurchaseTypeAndQuantity["one-time"][countSelected] *
+                    countSelected
                 : countSelected > 1 &&
                   "$" +
                     priceByPurchaseTypeAndQuantity[purchaseTypeSelected][1] *

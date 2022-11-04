@@ -1,10 +1,10 @@
 import React from "react";
 
-const Button = (props) => {
+const Button = ({ onClick, classNameOverride, label, span }) => {
   return (
-    <button onClick={props.onClick} className={props.classNameOverride}>
-      {props.label}
-      {props.span}
+    <button onClick={onClick} className={classNameOverride}>
+      {label}
+      {span}
     </button>
   );
 };

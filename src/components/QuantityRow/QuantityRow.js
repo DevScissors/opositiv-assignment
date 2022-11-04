@@ -3,8 +3,7 @@ import Button from "../shared/Button/Button";
 
 import styles from "./QuantityRow.module.scss";
 
-const QuantityRow = (props) => {
-  // It would definitely be easier to know what's coming in the props if you had ({onClick, countSelected}) => ...
+const QuantityRow = ({ countSelected, onClick, purchaseType }) => {
   const bottleDescription = [
     "1 bottle ships every month",
     "2 bottles ship every 2 months",
@@ -23,33 +22,31 @@ const QuantityRow = (props) => {
           <Button
             classNameOverride={`
               ${styles["btn-quantity"]}  +
-              ${
-                props.countSelected === 1 ? styles["btn-quantity-active"] : ""
-              }`}
-            onClick={() => props.onClick(1)}
+              ${countSelected === 1 ? styles["btn-quantity-active"] : ""}`}
+            onClick={() => onClick(1)}
             label="1"
           />
           <Button
             classNameOverride={`
             ${styles["btn-quantity"]}  +
-            ${props.countSelected === 2 ? styles["btn-quantity-active"] : ""}`}
-            onClick={() => props.onClick(2)}
+            ${countSelected === 2 ? styles["btn-quantity-active"] : ""}`}
+            onClick={() => onClick(2)}
             label="2"
           />
           <Button
             classNameOverride={`
             ${styles["btn-quantity"]}  +
-            ${props.countSelected === 3 ? styles["btn-quantity-active"] : ""}`}
-            onClick={() => props.onClick(3)}
+            ${countSelected === 3 ? styles["btn-quantity-active"] : ""}`}
+            onClick={() => onClick(3)}
             label="3"
           />
         </div>
       </div>
-      {props.purchaseType === "one-time" ? null : (
+      {purchaseType === "one-time" ? null : (
         <p className={styles["quantity-row-description"]}>
-          {props.countSelected === 3
+          {countSelected === 3
             ? bottleDescription[2] + bottleDescription[3]
-            : bottleDescription[props.countSelected - 1]}
+            : bottleDescription[countSelected - 1]}
         </p>
       )}
     </div>

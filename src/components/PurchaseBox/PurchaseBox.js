@@ -4,23 +4,28 @@ import PurchaseTypeRow from "../PurchaseTypeRow/PurchaseTypeRow";
 import styles from "./PurchaseBox.module.scss";
 import QuantityRow from "../QuantityRow/QuantityRow";
 
-const PurchaseBox = (props) => {
+const PurchaseBox = ({
+  handleOptionChange,
+  handlePurchaseTypeChange,
+  handleQuantityChange,
+  countSelected,
+  optionSelected,
+  purchaseTypeSelected,
+  priceMap,
+}) => {
   return (
     <div className={styles["purchase-box-wrapper"]}>
-      <OptionRow
-        onChange={props.handleOptionChange}
-        checked={props.optionSelected}
-      />
+      <OptionRow onChange={handleOptionChange} checked={optionSelected} />
       <PurchaseTypeRow
-        onChange={props.handlePurchaseTypeChange}
-        checked={props.purchaseTypeSelected}
-        countSelected={props.countSelected}
-        priceMap={props.priceMap}
+        onChange={handlePurchaseTypeChange}
+        checked={purchaseTypeSelected}
+        countSelected={countSelected}
+        priceMap={priceMap}
       />
       <QuantityRow
-        onClick={props.handleQuantityChange}
-        countSelected={props.countSelected}
-        purchaseType={props.purchaseTypeSelected}
+        onClick={handleQuantityChange}
+        countSelected={countSelected}
+        purchaseType={purchaseTypeSelected}
       />
     </div>
   );

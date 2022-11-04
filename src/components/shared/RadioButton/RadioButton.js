@@ -1,16 +1,16 @@
 import React from "react";
 
-const RadioButton = (props) => {
+const RadioButton = ({ label, checked, onChange, value }) => {
   return (
     <div>
       <input
-        label={props.label}
+        label={label}
         type="radio"
-        checked={props.checked}
-        onChange={props.onChange}
-        value={props.value}
+        checked={checked}
+        onChange={onChange}
+        value={value}
       />
-      <label htmlFor={props.value}>{props.label}</label>
+      <label htmlFor={value}>{label}</label>
     </div>
   );
 };

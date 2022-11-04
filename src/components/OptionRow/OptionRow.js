@@ -3,7 +3,7 @@ import RadioButton from "../shared/RadioButton/RadioButton";
 
 import styles from "./OptionRow.module.scss";
 
-const OptionRow = (props) => {
+const OptionRow = ({ checked, onChange }) => {
   return (
     <div className={styles["option-row-wrapper"]}>
       <div className={styles["option-row-header-wrapper"]}>
@@ -15,8 +15,8 @@ const OptionRow = (props) => {
           <RadioButton
             label="Gummies"
             type="radio"
-            checked={props.checked === "FLO - PMS Gummy Vitamins"}
-            onChange={props.onChange}
+            checked={checked === "FLO - PMS Gummy Vitamins"}
+            onChange={onChange}
             value="FLO - PMS Gummy Vitamins"
           />
           <p className={styles["option-row-gummies-description"]}>Strawberry</p>
@@ -25,8 +25,8 @@ const OptionRow = (props) => {
           <RadioButton
             label="Capsule"
             type="radio"
-            checked={props.checked === "FLO - PMS Vitamin Capsule"}
-            onChange={props.onChange}
+            checked={checked === "FLO - PMS Vitamin Capsule"}
+            onChange={onChange}
             value="FLO - PMS Vitamin Capsule"
           />
           <p className={styles["option-row-capsule-description"]}>Sugar-Free</p>
