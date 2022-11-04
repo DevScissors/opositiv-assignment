@@ -58,9 +58,17 @@ function App() {
   };
 
   const updateCart = () => {
+    const purchaseTypeCartDescritption =
+      purchaseTypeSelected === "subscribe"
+        ? `Subscription every ${countSelected} month(s)`
+        : "One Time";
     const newCart = [
       ...itemsSelected,
-      optionSelected + " | " + purchaseTypeSelected + " | " + countSelected,
+      optionSelected +
+        " | " +
+        purchaseTypeCartDescritption +
+        " | " +
+        countSelected,
     ];
     setItemsSelected(newCart);
     alert(newCart.join("\n"));
