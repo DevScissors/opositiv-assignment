@@ -7,7 +7,7 @@ const QuantityRow = (props) => {
   // It would definitely be easier to know what's coming in the props if you had ({onClick, countSelected}) => ...
   const bottleDescription = [
     "1 bottle ships every month",
-    "2 bottles ship every  2 months",
+    "2 bottles ship every 2 months",
     "Congrats, you've selected our best value!\n",
     "3 bottles ship every 3 months",
   ];

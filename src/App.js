@@ -34,11 +34,16 @@ function App() {
     GUMMIES: "FLO - PMS Gummy Vitamins",
   };
 
+  const cartValues = {
+    ITEMS: ["Item Name | Type | Count"],
+  };
+
   const [optionSelected, setSelectedOption] = useState(itemName.CAPSULE);
   const [purchaseTypeSelected, setSelectedPurchaseType] = useState(
     purchaseType.SUBSCRIPTION
   );
   const [countSelected, setCount] = useState(count.ONE);
+  const [itemsSelected, setItemsSelected] = useState(cartValues.ITEMS);
 
   const handleOptionChange = (checkedValue) => {
     setSelectedOption(checkedValue.target.value);
@@ -53,13 +58,12 @@ function App() {
   };
 
   const updateCart = () => {
-    const valuesArray = ["Item Name | Type | Count\n"];
-    return valuesArray
-      .map(() => [
-        ...valuesArray,
-        `${optionSelected} | ${purchaseTypeSelected} | ${countSelected}\n`,
-      ])
-      .join("");
+    const newCart = [
+      ...itemsSelected,
+      optionSelected + " | " + purchaseTypeSelected + " | " + countSelected,
+    ];
+    setItemsSelected(newCart);
+    alert(newCart.join("\n"));
   };
 
   return (
@@ -95,7 +99,7 @@ function App() {
             </span>
           </>
         }
-        onClick={() => alert(updateCart())}
+        onClick={() => updateCart()}
       />
     </div>
   );
