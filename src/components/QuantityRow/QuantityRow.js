@@ -3,7 +3,7 @@ import Button from "../shared/Button/Button";
 
 import styles from "./QuantityRow.module.scss";
 
-const QuantityRow = ({ countSelected, onClick, purchaseType }) => {
+const QuantityRow = ({ quantitySelected, onClick, purchaseType }) => {
   const bottleDescription = [
     "1 bottle ships every month",
     "2 bottles ship every 2 months",
@@ -22,21 +22,21 @@ const QuantityRow = ({ countSelected, onClick, purchaseType }) => {
           <Button
             classNameOverride={`
               ${styles["btn-quantity"]}  +
-              ${countSelected === 1 ? styles["btn-quantity-active"] : ""}`}
+              ${quantitySelected === 1 ? styles["btn-quantity-active"] : ""}`}
             onClick={() => onClick(1)}
             label="1"
           />
           <Button
             classNameOverride={`
             ${styles["btn-quantity"]}  +
-            ${countSelected === 2 ? styles["btn-quantity-active"] : ""}`}
+            ${quantitySelected === 2 ? styles["btn-quantity-active"] : ""}`}
             onClick={() => onClick(2)}
             label="2"
           />
           <Button
             classNameOverride={`
             ${styles["btn-quantity"]}  +
-            ${countSelected === 3 ? styles["btn-quantity-active"] : ""}`}
+            ${quantitySelected === 3 ? styles["btn-quantity-active"] : ""}`}
             onClick={() => onClick(3)}
             label="3"
           />
@@ -44,9 +44,9 @@ const QuantityRow = ({ countSelected, onClick, purchaseType }) => {
       </div>
       {purchaseType === "one-time" ? null : (
         <p className={styles["quantity-row-description"]}>
-          {countSelected === 3
+          {quantitySelected === 3
             ? bottleDescription[2] + bottleDescription[3]
-            : bottleDescription[countSelected - 1]}
+            : bottleDescription[quantitySelected - 1]}
         </p>
       )}
     </div>

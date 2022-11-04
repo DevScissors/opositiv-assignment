@@ -2,7 +2,7 @@ import React from "react";
 import RadioButton from "../shared/RadioButton/RadioButton";
 
 import styles from "./PurchaseTypeRow.module.scss";
-const PurchaseTypeRow = ({ checked, onChange, countSelected, priceMap }) => {
+const PurchaseTypeRow = ({ checked, onChange, quantitySelected, priceMap }) => {
   return (
     <div className={styles["purchase-type-row-wrapper"]}>
       <div className={styles["purchase-type-row-header-wrapper"]}>
@@ -38,7 +38,7 @@ const PurchaseTypeRow = ({ checked, onChange, countSelected, priceMap }) => {
           </div>
           <div className={styles["purchase-type-subscribe-price-wrapper"]}>
             <p className={styles["purchase-type-subscribe-price"]}>
-              {`$${priceMap["subscribe"][countSelected]}`}
+              {`$${priceMap["subscribe"][quantitySelected]}`}
             </p>
             <p className={styles["purchase-type-subscribe-pricing-info"]}>
               /BOTTLE
@@ -64,7 +64,7 @@ const PurchaseTypeRow = ({ checked, onChange, countSelected, priceMap }) => {
           </div>
           <div className={styles["purchase-type-one-time-price-wrapper"]}>
             <p className={styles["purchase-type-one-time-price"]}>
-              {`$${priceMap["one-time"][countSelected]}`}
+              {`$${priceMap["one-time"][quantitySelected]}`}
             </p>
             <p className={styles["purchase-type-one-time-pricing-info"]}>
               /BOTTLE

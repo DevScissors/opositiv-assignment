@@ -8,7 +8,7 @@ const PurchaseBox = ({
   handleOptionChange,
   handlePurchaseTypeChange,
   handleQuantityChange,
-  countSelected,
+  quantitySelected,
   optionSelected,
   purchaseTypeSelected,
   priceMap,
@@ -19,12 +19,12 @@ const PurchaseBox = ({
       <PurchaseTypeRow
         onChange={handlePurchaseTypeChange}
         checked={purchaseTypeSelected}
-        countSelected={countSelected}
+        quantitySelected={quantitySelected}
         priceMap={priceMap}
       />
       <QuantityRow
         onClick={handleQuantityChange}
-        countSelected={countSelected}
+        quantitySelected={quantitySelected}
         purchaseType={purchaseTypeSelected}
       />
     </div>

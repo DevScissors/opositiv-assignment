@@ -23,7 +23,7 @@ function App() {
     },
   };
 
-  const count = {
+  const quantity = {
     ONE: 1,
     TWO: 2,
     THREE: 3,
@@ -42,7 +42,7 @@ function App() {
   const [purchaseTypeSelected, setSelectedPurchaseType] = useState(
     purchaseType.SUBSCRIPTION
   );
-  const [countSelected, setCount] = useState(count.ONE);
+  const [quantitySelected, setQuantity] = useState(quantity.ONE);
   const [itemsSelected, setItemsSelected] = useState(cartValues.ITEMS);
 
   const handleOptionChange = (checkedValue) => {
@@ -53,14 +53,14 @@ function App() {
     setSelectedPurchaseType(checkedValue.target.value);
   };
 
-  const handleQuantityChange = (countSelected) => {
-    setCount(countSelected);
+  const handleQuantityChange = (quantitySelected) => {
+    setQuantity(quantitySelected);
   };
 
   const updateCart = () => {
     const purchaseTypeCartDescritption =
       purchaseTypeSelected === "subscribe"
-        ? `Subscription every ${countSelected} month(s)`
+        ? `Subscription every ${quantitySelected} month(s)`
         : "One Time";
     const newCart = [
       ...itemsSelected,
@@ -68,7 +68,7 @@ function App() {
         " | " +
         purchaseTypeCartDescritption +
         " | " +
-        countSelected,
+        quantitySelected,
     ];
     setItemsSelected(newCart);
     alert(newCart.join("\n"));
@@ -79,7 +79,7 @@ function App() {
       <PurchaseBox
         optionSelected={optionSelected}
         purchaseTypeSelected={purchaseTypeSelected}
-        countSelected={countSelected}
+        quantitySelected={quantitySelected}
         priceMap={priceByPurchaseTypeAndQuantity}
         handleOptionChange={handleOptionChange}
         handlePurchaseTypeChange={handlePurchaseTypeChange}
@@ -93,18 +93,18 @@ function App() {
             <span className={styles["cart-original-price"]}>
               {purchaseTypeSelected === "subscribe"
                 ? "$" +
-                  priceByPurchaseTypeAndQuantity["one-time"][countSelected] *
-                    countSelected
-                : countSelected > 1 &&
+                  priceByPurchaseTypeAndQuantity["one-time"][quantitySelected] *
+                    quantitySelected
+                : quantitySelected > 1 &&
                   "$" +
                     priceByPurchaseTypeAndQuantity[purchaseTypeSelected][1] *
-                      countSelected}
+                      quantitySelected}
             </span>
             <span className={styles["cart-promotional-price"]}>
               $
               {priceByPurchaseTypeAndQuantity[purchaseTypeSelected][
-                countSelected
-              ] * countSelected}
+                quantitySelected
+              ] * quantitySelected}
             </span>
           </>
         }
